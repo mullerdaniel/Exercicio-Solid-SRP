@@ -1,24 +1,21 @@
 package View;
 
-import org.example.Model.Funcionario;
+import model.Funcionario;
 import org.example.Service.FuncionarioService;
 
 public class FuncionarioView {
 
-    // RESPONSABILIDADE 3: Apresentação (Formatação de Relatório)
+    public void imprimir(Funcionario funcionario, FuncionarioService funcionarioService) {
 
-        private FuncionarioService calculadora;
+        double salarioLiquido =  funcionarioService.calcularSalarioLiquido(funcionario);
 
-        public void RelatorioFuncionario(FuncionarioService calculadora) {
-            this.calculadora = calculadora;
-        }
 
-    public void imprimirRelatorio(Funcionario funcionario) {
-        // Lógica de formatação para impressão ou exportação
         System.out.println("--- Relatório de Funcionário ---");
         System.out.println("Nome: " + funcionario.getNome());
+        System.out.println("Cargo: " + funcionario.getCargo());
         System.out.println("Salário Base: R$ " + funcionario.getSalarioBase());
-        System.out.println("Salário Líquido Calculado: R$ " + calculadora.calcularSalarioLiquido(funcionario));
+        System.out.println("Salário Líquido: R$ " + salarioLiquido);
         System.out.println("--------------------------------");
     }
+
 }

@@ -1,17 +1,16 @@
-package org.example.Model;
+package model;
 
 public class Funcionario {
 
-        private String nome;
-        private double salarioBase;
-        private String cargo;
+    private String nome;
+    private double salarioBase;
+    private String cargo;
 
-
-        public Funcionario(String nome, double salarioBase, String cargo) {
-            this.nome = nome;
-            this.salarioBase = salarioBase;
-            this.cargo = cargo;
-        }
+    public Funcionario(String nome, double salarioBase, String cargo) {
+        this.nome = nome;
+        this.salarioBase = salarioBase;
+        this.cargo = cargo;
+    }
 
     public String getNome() {
         return nome;
